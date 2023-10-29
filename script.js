@@ -18,7 +18,7 @@ function handleClick(id) {
             "Content-Type": "application/json",
         }
     }
-    fetch(`https://192.168.1.10:3000/api/relay/${id}?turn=on`);
+    fetch(`https://192.168.1.10:3000/api/relay/${id}?turn=on`, options);
     infraredTransmitter.classList.add("emit");
     clearTimeout(lastTimeoutId);
     lastTimeoutId = setTimeout(() => infraredTransmitter.classList.remove("emit"), 1000);
