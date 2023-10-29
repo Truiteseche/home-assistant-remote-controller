@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Télécommande Home Assistant</title>
 </head>
+
 <body>
     <div id="app">
         <!-- <h1 id="heading">Télécommande Home Assistant</h1> -->
@@ -13,17 +15,36 @@
             <div id="infrared-transmitter"></div>
             <div id="inputs-container">
                 <div class="input-row">
-                    <button type="button" class="button" id="gate"><img src="assets/gate.svg" alt="Icône de portail" class="icon">Portail</button>
-                    <button type="button" class="button" id="garage-1"><img src="assets/garage.svg" alt="Icône de garage" class="icon">Garage 1</button>
+                    <button type="button" class="button" id="gate"><img src="assets/gate.svg" alt="Icône de portail"
+                            class="icon">Portail</button>
+                    <button type="button" class="button" id="garage-1"><img src="assets/garage.svg"
+                            alt="Icône de garage" class="icon">Garage 1</button>
                 </div>
                 <div class="input-row">
-                    <button type="button" class="button" id="garage-2"><img src="assets/garage.svg" alt="Icône de garage" class="icon">Garage 2</button>
-                    <button type="button" class="button" id="garage-3"><img src="assets/garage.svg" alt="Icône de garage" class="icon">Garage 3</button>
+                    <button type="button" class="button" id="garage-2"><img src="assets/garage.svg"
+                            alt="Icône de garage" class="icon">Garage 2</button>
+                    <button type="button" class="button" id="garage-3"><img src="assets/garage.svg"
+                            alt="Icône de garage" class="icon">Garage 3</button>
                 </div>
             </div>
             <img src="assets/home-assistant-logo.png" alt="Logo Home Assistant" id="home-assistant-logo">
         </div>
     </div>
     <script type="module" src="script.js"></script>
+    <script>
+        console.log("registering service worker...")
+        console.log("serviceWorker in navigator:", "serviceWorker" in navigator)
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("/service-worker.js")
+                .then(function (registration) {
+                    console.log("Service Worker enregistré avec succès :", registration);
+                })
+                .catch(function (error) {
+                    console.log("Échec de l'enregistrement du Service Worker : ", error);
+            });
+        }
+    </script>
+
 </body>
+
 </html>

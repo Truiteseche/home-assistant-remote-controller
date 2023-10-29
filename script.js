@@ -7,7 +7,7 @@ const garage3 = document.getElementById("garage-3");
 
 
 function handleClick(id) {
-    console.log("Clicked:", id)
+    alert("Clicked: " + id)
 }
 
 gate.addEventListener("click", () => handleClick("gate"));
