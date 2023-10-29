@@ -7,7 +7,8 @@ const CACHED_FILES = [
     "/assets/garage.svg",
     "/assets/gate.svg",
     "/assets/home-assistant-logo.png",
-    "/assets/remote-controller-icon.ico"
+    "/assets/remote-controller-icon.ico",
+    "/assets/remote-controller-icon.png"
 ]
 
 self.addEventListener("install", (event) => {

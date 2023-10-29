@@ -10,7 +10,7 @@
     "icons": [
         {
             "src": "/assets/remote-controller-icon.png",
-            "sizes": "1667x1667",
+            "sizes": "144x144",
             "type": "image/png"
         }
     ]
