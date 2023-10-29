@@ -8,11 +8,20 @@
 </head>
 <body>
     <div id="app">
-        <h1 id="heading">Télécommande Home Assistant</h1>
-        <div id="inputs-container">
-            <button type="button" class="button" id="gate">Portail</button>
-            <button type="button" class="button" id="left-garage">Garage gauche</button>
-            <button type="button" class="button" id="right-garage">Garage droit</button>
+        <!-- <h1 id="heading">Télécommande Home Assistant</h1> -->
+        <div id="remote-controller">
+            <div id="infrared-transmitter"></div>
+            <div id="inputs-container">
+                <div class="input-row">
+                    <button type="button" class="button" id="gate"><img src="assets/gate.svg" alt="Icône de portail" class="icon">Portail</button>
+                    <button type="button" class="button" id="garage-1"><img src="assets/garage.svg" alt="Icône de garage" class="icon">Garage 1</button>
+                </div>
+                <div class="input-row">
+                    <button type="button" class="button" id="garage-2"><img src="assets/garage.svg" alt="Icône de garage" class="icon">Garage 2</button>
+                    <button type="button" class="button" id="garage-3"><img src="assets/garage.svg" alt="Icône de garage" class="icon">Garage 3</button>
+                </div>
+            </div>
+            <img src="assets/home-assistant-logo.png" alt="Logo Home Assistant" id="home-assistant-logo">
         </div>
     </div>
     <script type="module" src="script.js"></script>

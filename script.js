@@ -1,7 +1,8 @@
 
 const gate = document.getElementById("gate");
-const leftGarage = document.getElementById("left-garage");
-const rightGarage = document.getElementById("right-garage");
+const garage1 = document.getElementById("garage-1");
+const garage2 = document.getElementById("garage-2");
+const garage3 = document.getElementById("garage-3");
 
 
 
@@ -10,5 +11,6 @@ function handleClick(id) {
 }
 
 gate.addEventListener("click", () => handleClick("gate"));
-leftGarage.addEventListener("click", () => handleClick("leftGarage"));
-rightGarage.addEventListener("click", () => handleClick("rightGarage"));
+garage1.addEventListener("click", () => handleClick("garage1"));
+garage2.addEventListener("click", () => handleClick("garage2"));
+garage3.addEventListener("click", () => handleClick("garage3"));

@@ -11,8 +11,7 @@ body, html {
 }
 
 body {
-    background-color: #ececec;
-    max-width: 800px;
+    background-color: rgb(204, 232, 243);
     margin: 0 auto;
     padding: 20px;
 }
@@ -21,46 +20,89 @@ body, input {
 }
 
 #app {
-    height: 100%;
     display: flex;
-    flex-flow: column nowrap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding-inline: 20px;
 }
 
 #heading {
     text-align: center;
     margin: 30px;
     font-size: 32px;
+    color: #7a7a7a;
+}
+
+#remote-controller {
+    background-color: #ececec;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 0 15px rgba(70, 70, 70);
+    border-radius: 10px 10px 50px 50px;
+    padding-inline: 15px;
+}
+
+#infrared-transmitter {
+    width: 20px;
+    height: 40px;
+    background-color: #3dbcf3;
+    margin-bottom: 40px;
+    margin-inline: auto;
+    box-shadow: inset 10px 0 5px #3094c0;
+    border-radius: 0 0 5px 5px;
 }
 
 #inputs-container {
-    height: 100%;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
+    gap: 30px;
+}
+
+.input-row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
     gap: 20px;
 }
 
-#gate {
-    flex-basis: 100%;
+
+.icon {
+    height: 25px;
 }
 
-#left-garage, #right-garage {
-    flex: 1;
+.button, .icon {
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
 }
 
 .button {
-    /* height: 100px; */
+    aspect-ratio: 1/1;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    max-width: 130px;
     box-shadow: 
     -10px -10px 15px rgba(255, 255, 255, .5),
     10px 10px 15px rgba(70, 70, 70, .12);
-    border-radius: 15px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
     border: 4px solid #ececec;
+    border-radius: 100px;
     background-color: transparent;
     color: #7a7a7a;
     outline: none;
     transition: .05s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 .button:active {
@@ -69,4 +111,11 @@ body, input {
     10px 10px 15px rgba(70, 70, 70, .12),
     inset -10px -10px 15px rgba(255, 255, 255, .5),
     inset 10px 10px 15px rgba(70, 70, 70, .12);
+}
+
+#home-assistant-logo {
+    display: block;
+    width: 70px;
+    margin: 30px auto;
+    margin-top: 40px;
 }
