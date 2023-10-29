@@ -4,7 +4,6 @@ const CACHED_FILES = [
     "/index.html",
     "/styles.css",
     "/script.js",
-    "/service-worker.js",
     "/assets/garage.svg",
     "/assets/gate.svg",
     "/assets/home-assistant-logo.png",
