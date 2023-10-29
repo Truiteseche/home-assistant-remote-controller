@@ -4,13 +4,19 @@ const garage1 = document.getElementById("garage-1");
 const garage2 = document.getElementById("garage-2");
 const garage3 = document.getElementById("garage-3");
 
+const infraredTransmitter = document.getElementById("infrared-transmitter")
 
+let lastTimeoutId = null;
 
 function handleClick(id) {
-    alert("Clicked: " + id)
+    // alert("Clicked: " + id)
+    fetch(`http://192.168.1.100/relay/${id}?turn=on`)
+    infraredTransmitter.classList.add("emit")
+    clearTimeout(lastTimeoutId);
+    lastTimeoutId = setTimeout(() => infraredTransmitter.classList.remove("emit"), 1000);
 }
 
-gate.addEventListener("click", () => handleClick("gate"));
-garage1.addEventListener("click", () => handleClick("garage1"));
-garage2.addEventListener("click", () => handleClick("garage2"));
-garage3.addEventListener("click", () => handleClick("garage3"));
+gate.addEventListener("click", () => handleClick(0));
+garage1.addEventListener("click", () => handleClick(1));
+garage2.addEventListener("click", () => handleClick(2));
+garage3.addEventListener("click", () => handleClick(3));

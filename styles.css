@@ -55,6 +55,9 @@ body, input {
     box-shadow: inset 10px 0 5px #3094c0;
     border-radius: 0 0 5px 5px;
 }
+#infrared-transmitter.emit {
+    animation: blink 0.1s linear infinite;
+}
 
 #inputs-container {
     display: flex;
@@ -123,5 +126,15 @@ body, input {
 @media only screen and (max-width: 312px) {
     .icon {
         display: none;
+    }
+}
+
+@keyframes blink {
+    from {
+        filter: brightness(1);
+    }
+    
+    to {
+        filter: brightness(1.5);
     }
 }

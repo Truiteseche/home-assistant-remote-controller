@@ -1,0 +1,17 @@
+{
+    "dir": "ltr",
+    "lang": "fr",
+    "name": "Télécommande Home Assistant",
+    "short_name": "Télécommande",
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#cce8f3",
+    "background_color": "#ececec",
+    "icons": [
+        {
+            "src": "/assets/remote-controller-icon.png",
+            "sizes": "1667x1667",
+            "type": "image/png"
+        }
+    ]
+}

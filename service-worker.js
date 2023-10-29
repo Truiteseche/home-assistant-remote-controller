@@ -1,4 +1,4 @@
-const serviceWorkerVersion = "V1.18";
+const serviceWorkerVersion = "V1.1";
 const CACHED_FILES = [
     "/",
     "/index.html",
@@ -7,7 +7,8 @@ const CACHED_FILES = [
     "/service-worker.js",
     "/assets/garage.svg",
     "/assets/gate.svg",
-    "/assets/home-assistant-logo.png"
+    "/assets/home-assistant-logo.png",
+    "/assets/remote-controller-icon.ico"
 ]
 
 self.addEventListener("install", (event) => {
