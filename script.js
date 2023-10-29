@@ -10,8 +10,16 @@ let lastTimeoutId = null;
 
 function handleClick(id) {
     // alert("Clicked: " + id)
-    fetch(`http://192.168.1.100/relay/${id}?turn=on`)
-    infraredTransmitter.classList.add("emit")
+
+    const options = {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+            "Content-Type": "application/json",
+        }
+    }
+    fetch(`https://192.168.1.10:3000/api/relay/${id}?turn=on`);
+    infraredTransmitter.classList.add("emit");
     clearTimeout(lastTimeoutId);
     lastTimeoutId = setTimeout(() => infraredTransmitter.classList.remove("emit"), 1000);
 }
