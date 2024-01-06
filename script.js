@@ -12,13 +12,14 @@ function handleClick(id) {
     // alert("Clicked: " + id)
 
     const options = {
-        method: "POST",
+        method: "GET",
         mode: "no-cors",
         headers: {
             "Content-Type": "application/json",
         }
     }
-    fetch(`https://192.168.1.10:3000/api/relay/${id}?turn=on`, options);
+    // fetch(`https://192.168.1.10:3000/api/relay/${id}?turn=on`, options);
+    fetch(`http://192.168.1.100/relay/${id}?turn=on`, options);
     infraredTransmitter.classList.add("emit");
     clearTimeout(lastTimeoutId);
     lastTimeoutId = setTimeout(() => infraredTransmitter.classList.remove("emit"), 1000);
