@@ -19,6 +19,38 @@ body, input {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
+#error-banner {
+    color: rgb(100, 0, 0);
+    background-color: rgba(200, 0, 0, .4);
+    padding: 20px;
+    position: absolute;
+    border-radius: 10px;
+    border: 1px solid rgb(100, 0, 0);
+    width: max-content;
+    max-width: 80%;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    animation: pop-in 0.5s ease 0s forwards;
+    z-index: 99;
+}
+
+#error-banner.hidden {
+    display: none;
+}
+
+@keyframes pop-in {
+    from {
+        opacity: 0;
+        top: -100%;
+    }
+    to {
+        opacity: 1;
+        top: 20px;
+    }
+}
+
 #app {
     display: flex;
     position: absolute;
@@ -74,7 +106,11 @@ body, input {
 
 
 .icon {
-    height: 25px;
+    height: 30px;
+}
+
+#garage-1 .icon, #garage-2 .icon {
+    height: 35px;
 }
 
 .button, .icon {
@@ -103,6 +139,7 @@ body, input {
     transition: .05s;
 
     display: flex;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -114,6 +151,10 @@ body, input {
     10px 10px 15px rgba(70, 70, 70, .12),
     inset -10px -10px 15px rgba(255, 255, 255, .5),
     inset 10px 10px 15px rgba(70, 70, 70, .12);
+}
+
+.button:disabled {
+    pointer-events: none;
 }
 
 #home-assistant-logo {
